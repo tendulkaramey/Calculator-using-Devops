@@ -1,4 +1,6 @@
 import math
+import logging
+logging.basicConfig(filename='calculator.log', encoding='utf-8', level=logging.DEBUG)
 
 def factorial(number):
     ans = 1
@@ -22,6 +24,7 @@ def startcalculator():
 
 
     while True:
+        logging.info('Started')
         print('-----------------********----------------')
         print('1.Square root\n2.factorial\n3.log\n4.power\n5.exit')
         inputnumber = int(input())
