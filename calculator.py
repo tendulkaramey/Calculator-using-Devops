@@ -20,6 +20,7 @@ def naturallog(number):
 def startcalculator():
     print('Welcome User')
     print('Select the option')
+    input("Press Enter to continue...")
     while True:
         print('-----------------********----------------')
         print('1.Square root\n2.factorial\n3.log\n4.power\n5.exit')
