@@ -17,11 +17,11 @@ def squareroot(number):
 def naturallog(number):
     return math.log(number)
 
-def startcalculator():
-    print('Welcome User')
-    print('Select the option')
+def startcalculator(): 
     input("Press Enter to continue...")
+    print('Welcome User')
     while True:
+        print('Select the option')
         print('-----------------********----------------')
         print('1.Square root\n2.factorial\n3.log\n4.power\n5.exit')
         inputnumber = int(input())
