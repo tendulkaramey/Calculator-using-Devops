@@ -18,13 +18,8 @@ def naturallog(number):
     return math.log(number)
 
 def startcalculator():
-    print('press enter to continue')
-    s = input()
     print('Welcome User')
     print('Select the option')
-
-
-
     while True:
         print('-----------------********----------------')
         print('1.Square root\n2.factorial\n3.log\n4.power\n5.exit')
