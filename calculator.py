@@ -21,7 +21,7 @@ def startcalculator():
     input("Press Enter to continue...")
     print('Welcome User')
     while True:
-        print('Input the option')
+        print('Input the option test')
         print('-----------------********----------------')
         print('1.Square root\n2.factorial\n3.log\n4.power\n5.exit')
         inputnumber = int(input())
