@@ -5,10 +5,8 @@
     ansible_python_interpreter: /usr/bin/python3
   tasks:
     - name: Pull Docker Image
-      docker_image:
-        name: tendulkaramey/python-calculator-devops
-        tag: latest
-        source: pull
+      shell: |
+        docker pull tendulkaramey/python-calculator-devops
 
     - name: Create & Start Calculator Docker Container
       docker_container:
