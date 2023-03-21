@@ -25,11 +25,18 @@ def startcalculator():
         print('-----------------********----------------')
         print('1.Square root\n2.factorial\n3.log\n4.power\n5.exit')
         inputnumber = int(input())
+        logging.debug('Option pressed by user:{0}'.format(inputnumber))
         if inputnumber == 5:
             break
         if inputnumber == 1:
             print('enter number')
-            no = float(input())
+            try:
+                no = float(input())
+            except Exception as e:
+                print('please enter number only.')
+                logging.error(e)
+                continue
+                
             logging.info('[Square Root] - {0}'.format(no))
             result = squareroot(no)
             logging.info('[RESULT - Square Root] - {0}'.format(result))
