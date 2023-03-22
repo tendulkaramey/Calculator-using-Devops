@@ -84,3 +84,6 @@
 2023-03-22 13:15:05 INFO     [Power] - 2.0 raised to 3.0
 2023-03-22 13:15:05 INFO     [RESULT- Power] - 8.0
 2023-03-22 13:15:06 DEBUG    Option pressed by user:5
+2023-03-22 14:14:27 DEBUG    Option pressed by user:1
+2023-03-22 14:14:29 ERROR    could not convert string to float: 'hello'
+2023-03-22 14:14:33 DEBUG    Option pressed by user:5
