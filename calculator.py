@@ -9,62 +9,84 @@ def factorial(number):
     return ans
 
 def power(base,exponent):
-    return math.pow(base,exponent)
+    try:
+        return math.pow(base,exponent)
+    except Exception as e:
+        logging.error(e)
+        return('some error occured, please try again')
 
 def squareroot(number):
-    return math.sqrt(number)
+    try:
+        return math.sqrt(number)
+    except Exception as e:
+        logging.error(e)
+        return('some error occured, please try again')
 
 def naturallog(number):
-    return math.log(number)
+    try:
+        return math.log(number)
+    except Exception as e:
+        logging.error(e)
+        return('some error occured, please try again')
 
 def startcalculator(): 
     input("Press Enter to continue...")
     print('Welcome User')
     while True:
-        print('Please Iput option of your choice')
+        print('Please Input option of your choice')
         print('-----------------********----------------')
         print('1.Square root\n2.factorial\n3.log\n4.power\n5.exit')
         inputnumber = int(input())
         logging.debug('Option pressed by user:{0}'.format(inputnumber))
+
         if inputnumber == 5:
             break
-        if inputnumber == 1:
+        if inputnumber != 4:
             print('enter number')
             try:
                 no = float(input())
             except Exception as e:
-                print('please enter number only.')
+                print('please enter no only')
                 logging.error(e)
                 continue
-                
+
+        if inputnumber == 4:          
+            try:
+                print('enter base')
+                base = float(input())
+                print('enter exponent')
+                exponent = float(input())
+            except Exception as e:
+                print('enter no only')
+                logging.error(e)
+                continue
+
+
+        if inputnumber == 1:               
             logging.info('[Square Root] - {0}'.format(no))
             result = squareroot(no)
             logging.info('[RESULT - Square Root] - {0}'.format(result))
             print('square root of given no is {0}'.format(result))
+
         elif inputnumber == 2:
-            print('enter the no to find factorial')
-            #check if no else error
-            i = int(input())
+            i = int(no)
             logging.info('[Factorial] - {0}'.format(i))
             result = factorial(i)
             logging.info('[RESULT - Factorial] - {0}'.format(result))
             print('factorial for given no is {0}'.format(result))
+
         elif inputnumber == 3:
-            print('enter the no to find log')
-            no = float(input())
             logging.info('[Natural Log] - {0}'.format(no))
             result = naturallog(no)
             logging.info('[RESULT - Natural Log] - {0}'.format(result))
             print('log of given no is {0}'.format(result))
+
         elif inputnumber == 4:
-            print('enter base')
-            base = float(input())
-            print('enter exponent')
-            exponent = float(input())
             logging.info('[Power] - {0} raised to {1}'.format(base,exponent))
             result = power(base,exponent)
             logging.info('[RESULT- Power] - {0}'.format(result))
             print('base to the power exponent with given values is {0}'.format(result))
+            
         else:
             print('please select proper option')
 
