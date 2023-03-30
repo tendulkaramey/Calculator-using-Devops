@@ -10,7 +10,7 @@ def factorial(number):
         return ans
     except Exception as e:
         logging.error(e)
-        return ('some error occured:'+e)
+        return ('some error occured:')
 
 def power(base,exponent):
     try:
