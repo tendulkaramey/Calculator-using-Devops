@@ -4,9 +4,13 @@ logging.basicConfig(filename='calculator.log',format='%(asctime)s %(levelname)-8
 
 def factorial(number):
     ans = 1
-    for i in range(2,number+1):
-        ans = i*ans
-    return ans
+    try:
+        for i in range(2,number+1):
+            ans = i*ans
+        return ans
+    except Exception as e:
+        logging.error(e)
+        return ('some error occured:'+e)
 
 def power(base,exponent):
     try:
@@ -102,4 +106,3 @@ def startcalculator():
 
 if __name__ == "__main__":
     startcalculator()
-    
