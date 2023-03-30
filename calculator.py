@@ -44,6 +44,11 @@ def startcalculator():
             continue
         logging.debug('Option pressed by user:{0}'.format(inputnumber))
 
+        if inputnumber > 5 or inputnumber == 0:
+            print('enter number from the above list only')
+            continue 
+
+
         if inputnumber == 5:
             break
         if inputnumber != 4:
