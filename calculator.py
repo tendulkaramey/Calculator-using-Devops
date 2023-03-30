@@ -36,7 +36,12 @@ def startcalculator():
         print('Please Input option of your choice')
         print('-----------------********----------------')
         print('1.Square root\n2.factorial\n3.log\n4.power\n5.exit')
-        inputnumber = int(input())
+        try:
+            inputnumber = int(input())
+        except Exception as e:
+            logging.error(e)
+            print('enter number from the above list only.')
+            continue
         logging.debug('Option pressed by user:{0}'.format(inputnumber))
 
         if inputnumber == 5:

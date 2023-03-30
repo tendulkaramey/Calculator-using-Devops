@@ -87,3 +87,5 @@
 2023-03-22 14:14:27 DEBUG    Option pressed by user:1
 2023-03-22 14:14:29 ERROR    could not convert string to float: 'hello'
 2023-03-22 14:14:33 DEBUG    Option pressed by user:5
+2023-03-30 19:15:25 ERROR    invalid literal for int() with base 10: 'scadasd'
+2023-03-30 19:15:31 DEBUG    Option pressed by user:5
