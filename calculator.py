@@ -104,5 +104,6 @@ def startcalculator():
         else:
             print('please select proper option')
 
+
 if __name__ == "__main__":
     startcalculator()
